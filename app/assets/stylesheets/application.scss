@@ -22,3 +22,7 @@
  .fa-link, .fa-retweet, .fa-heart, .fa-lock {
      color: black;
  }
+
+ .notification:not(:last-child) {
+     margin-bottom: 0px;
+ }
