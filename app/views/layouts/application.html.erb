@@ -43,8 +43,8 @@
       <div class="navbar-menu" id="nav-links">
           <div class="navbar-end">
               <div class="buttons has-text-weight-bold navbar-item">
-                  <a class="button is-dark">Login</a>
-                  <a class="button is-warning">Sign up</a>
+                  <%= link_to 'Login', new_user_session_path, class: 'button is-dark'%>
+                  <%= link_to 'Sign up', new_user_registration_path, class: 'button is-warning' %>
                 </div>
           </div>
       </div>
