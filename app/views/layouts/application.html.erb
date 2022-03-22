@@ -6,6 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -23,21 +24,21 @@
     <% end %>
 
     <!-- nav bar -->
-    <nav class="navbar is-black is-mobile is-marginless">
+    <nav class="navbar is-dark is-mobile is-marginless">
       <div class="navbar-brand">
           <div class="navbar-item">
-              <a class="navbar-item" href="./index.html">
+              <a class="navbar-item" href="/">
                   <img src="./padlock.svg" style="width: 2rem; height: 6rem;">
               </a>
               <h1 class="title has-text-white">
                   Members Only
               </h1> 
           </div>
-          <a href="#" class="navbar-burger" id="burger">
+          <div class="navbar-burger" id="burger">
               <span></span>
               <span></span>
               <span></span>
-          </a>
+          </div>
       </div>
       <div class="navbar-menu" id="nav-links">
           <div class="navbar-end">
@@ -49,5 +50,22 @@
       </div>
     </nav>
     <%= yield %>
+    <footer class="footer has-background-black pb-1">
+      <div class="content has-text-centered has-text-weight-bold has-text-white">
+        <p>
+          <span class="icon"><i class="fa fa-github fa-3x"></i></span>
+        </p>
+        <h6 class="is-3 has-text-white">@AliAdamH</h6>
+      </div>
+  </footer>
+    <script>  
+        const burger = document.querySelector('#burger');
+        const links = document.querySelector('#nav-links');
+
+        burger.addEventListener('click', () => {
+            links.classList.toggle('is-active');
+            links.classList.toggle('has-background-dark');
+        })
+    </script>
   </body>
 </html>
