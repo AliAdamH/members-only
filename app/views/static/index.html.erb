@@ -4,7 +4,7 @@
             Welcome to Members Only !
         </h1>
         <h2 class="subtitle">
-            Choose your Navigation
+            Choose your navigation mode
         </h2>
     </div>
     <div class="hero-body centered">
@@ -41,9 +41,14 @@
                                     <span class="icon is-small"><i class="fa fa-lock"></i></span>
                                 </a>
                             </div>
-                            </nav>
+                        </nav>
                     </div>
                 </article>
+                <div class="level">
+                    <div class="level-item is-justify-content-flex-center">
+                        <%= link_to 'Choose Lurker', posts_path , class: "button is-warning has-text-weight-medium" %>
+                    </div>
+                </div>
             </div>
             <div class="column is-half">
                 <h3 class="subtitle is-3 has-text-centered has-text-warning has-text-weight-bold">Member Mode</h3>
@@ -80,6 +85,11 @@
                             </nav>
                     </div>
                 </article>
+                <div class="level">
+                    <div class="level-item is-justify-content-flex-center">
+                        <%= link_to 'Choose Member', new_user_session_path , class: "button is-warning has-text-weight-medium" %>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
