@@ -10,7 +10,7 @@
             <div class="content">
                 <p>
                 <strong><%= post.title %></strong> <br/>
-                <small><%= post.user.username %></small><br/>
+                <small><%= user_signed_in? ? post.user.username : '[REDACTED]' %></small><br/>
                 <%= post.body %>
                 </p>
             </div>
