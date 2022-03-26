@@ -7,4 +7,8 @@ module PostsHelper
   def owner?(post)
     current_user == post.user
   end
+
+  def profile_picture
+    user_signed_in? ? '/smiley.png' : '/spy.png'
+  end
 end
