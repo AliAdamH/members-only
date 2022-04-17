@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :posts
+  resources :posts, except: %i[show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  unauthenticated :user do 
+  unauthenticated :user do
     root to: 'static#index'
   end
 
