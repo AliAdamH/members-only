@@ -1,6 +1,13 @@
-<h1>Editing Post</h1>
+<section class="section has-background-black">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+            <%= render 'form', post: @post %>
 
-<%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+            <%= link_to 'Show', @post %> |
+            <%= link_to 'Back', posts_path %>
+            </div>
+        </div>
+    </div>
+</section>
