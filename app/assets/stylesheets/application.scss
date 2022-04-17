@@ -26,3 +26,14 @@
  .notification:not(:last-child) {
      margin-bottom: 0px;
  }
+
+#main-section {
+    min-height: 85vh;
+}
+
+.empty-box {
+     height: 400px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }

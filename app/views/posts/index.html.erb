@@ -1,11 +1,11 @@
-<section class="section has-background-black">
+<section id="main-section" class="section has-background-black">
   <div class="container">
     <div class="columns">
       <div class="column is-half is-offset-3">
         <% if user_signed_in? %>
           <%= render 'posts/form' %>
         <% end %>
-        <%= render @posts %>
+        <%= render(@posts) || render('zeroposts') %>
       </div>
     </div>
   </div>
