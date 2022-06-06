@@ -3,7 +3,7 @@
     <div class="columns">
       <div class="column is-half is-offset-3">
         <% if user_signed_in? %>
-          <%= render 'posts/form' %>
+          <%= render 'posts/form', post: @post %>
         <% end %>
         <%= render(@posts) || render('zeroposts') %>
       </div>
