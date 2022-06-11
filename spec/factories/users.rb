@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :user do
-    email { 'default@email.com' }
+    sequence(:email) { |n| "default#{n}@email.com" }
     password { 'very$secure$password' }
     password_confirmation { 'very$secure$password' }
     name { 'FooFoo' }
-    username { 'BarBar' }
+    sequence(:username) { |n| "BarBar#{n}" }
 
     trait :invalid_password do
       password { 12345 }
